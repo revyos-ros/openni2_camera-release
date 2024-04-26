@@ -1,0 +1,60 @@
+From 7613e583626367693b9396582bd17bda92511ccf Mon Sep 17 00:00:00 2001
+From: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+Date: Fri, 26 Apr 2024 13:35:48 +0800
+Subject: [PATCH 2/2] add add-missing-header.patch
+
+---
+ debian/patches/add-missing-header.patch | 32 ++++++++-----------------
+ debian/patches/series                   |  2 +-
+ 2 files changed, 11 insertions(+), 23 deletions(-)
+ rewrite debian/patches/add-missing-header.patch (83%)
+
+diff --git a/debian/patches/add-missing-header.patch b/debian/patches/add-missing-header.patch
+dissimilarity index 83%
+index ec4b1c7..5f60165 100644
+--- a/debian/patches/add-missing-header.patch
++++ b/debian/patches/add-missing-header.patch
+@@ -1,22 +1,10 @@
+-From 0dfb84da6a3a8121313d6761236ee3ce88ebcf8d Mon Sep 17 00:00:00 2001
+-From: Michael Ferguson <mfergs7@gmail.com>
+-Date: Thu, 14 Mar 2024 18:04:44 -0400
+-Subject: [PATCH] fix build on Ubuntu Noble (24.04) (#138)
+-
+-add missing header
+----
+- openni2_camera/include/openni2_camera/openni2_device_info.h | 1 +
+- 1 file changed, 1 insertion(+)
+-
+-diff --git a/openni2_camera/include/openni2_camera/openni2_device_info.h b/openni2_camera/include/openni2_camera/openni2_device_info.h
+-index fef11b7..08879f4 100644
+---- a/openni2_camera/include/openni2_camera/openni2_device_info.h
+-+++ b/openni2_camera/include/openni2_camera/openni2_device_info.h
+-@@ -33,6 +33,7 @@
+- #define OPENNI2_DEVICE_INFO_H_
+- 
+- #include <ostream>
+-+#include <cstdint>
+- 
+- namespace openni2_wrapper
+- {
++--- a/include/openni2_camera/openni2_device_info.h
+++++ b/include/openni2_camera/openni2_device_info.h
++@@ -33,6 +33,7 @@
++ #define OPENNI2_DEVICE_INFO_H_
++ 
++ #include <ostream>
+++#include <cstdint>
++ 
++ namespace openni2_wrapper
++ {
+diff --git a/debian/patches/series b/debian/patches/series
+index 78bf91c..dd07558 100644
+--- a/debian/patches/series
++++ b/debian/patches/series
+@@ -1 +1 @@
+-add-missing-header.patch
+\ No newline at end of file
++add-missing-header.patch
+-- 
+2.41.0
+
