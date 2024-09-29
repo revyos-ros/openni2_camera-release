@@ -1,4 +1,4 @@
-release_repo_url: git@github.com:revyos-ros/openni2_camera-release
+release_repo_url: git@github.com:revyos-ros/openni2_camera-release.git
 tracks:
   humble:
     actions:
