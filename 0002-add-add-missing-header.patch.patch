@@ -1,4 +1,4 @@
-From 8fd41939a0f61ad208c6b91de415a99847395b50 Mon Sep 17 00:00:00 2001
+From be10278d1f04e161ebad9590903733c43f0088ba Mon Sep 17 00:00:00 2001
 From: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 Date: Fri, 26 Apr 2024 13:35:48 +0800
 Subject: [PATCH 2/2] add add-missing-header.patch
