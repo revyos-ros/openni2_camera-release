@@ -1,0 +1,10 @@
+--- a/include/openni2_camera/openni2_device_info.h
++++ b/include/openni2_camera/openni2_device_info.h
+@@ -33,6 +33,7 @@
+ #define OPENNI2_DEVICE_INFO_H_
+ 
+ #include <ostream>
++#include <cstdint>
+ 
+ namespace openni2_wrapper
+ {
